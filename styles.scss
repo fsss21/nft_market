@@ -1673,6 +1673,53 @@ body {
   }
 }
 
+.modal-register {
+  display: none;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  top: 350px;
+  left: 850px;
+  padding: 20px;
+  position: fixed;
+  gap: 20px;
+  border-radius: 8px;
+  background-color: grey;
+
+  &__title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  &__input {
+    background: rgb(47, 45, 45);
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+}
+
+.active-modal {
+  display: flex;
+  animation-name: show-modal;
+  animation-duration: 1s;
+}
+
+@keyframes show-modal {
+  from {
+    transform: translateX(-1000px);
+  }
+
+  // 50% {
+  //   transform: translateY(-100px);
+  // }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 @media (max-width: 960px) {
   .header {
     position: static;
